@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Student Registration</h1>
+            <p class="subtitle">Create your voting account</p>
+            
+            <form action="register.php" method="POST" id="registrationForm">
+                <label>Full Name</label>
+                <input type="text" name="name" required>
+                
+                <label>Registration Number</label>
+                <input type="text" name="reg_no" required>
+                
+                <label>College</label>
+                <input type="text" name="college" required>
+                
+                <label>Department</label>
+                <input type="text" name="department" required>
+                
+                <label>Password</label>
+                <input type="password" name="password" required>
+                
+                <label>Study Mode</label>
+                <select name="study_mode" id="studyMode" onchange="toggleJimbo()" required>
+                    <option value="">Select Mode</option>
+                    <option value="on_campus">On Campus</option>
+                    <option value="off_campus">Off Campus</option>
+                </select>
+                
+                <!-- Jimbo Section -->
+                <div id="jimboSection" style="display:none;">
+                    <label>Jimbo (Off Campus Only)</label>
+                    <select name="jimbo" id="jimboSelect" disabled>
+                        <option value="">Select Jimbo</option>
+                        <option value="kati">Kati</option>
+                        <option value="mashariki">Mashariki</option>
+                        <option value="magharibi">Magharibi</option>
+                    </select>
+                </div>
+                
+                <br>
+                <button type="submit">Register</button>
+            </form>
+            
+            <p class="register-text">
+                Already have an account?
+                <a href="index.php">Login</a>
+            </p>
+        </div>
+    </div>
+    
+    <!-- Move script here -->
+    <script src="javascript.js"></script>
+</body>
+</html>
